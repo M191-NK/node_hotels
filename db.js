@@ -5,12 +5,7 @@ require('dotenv').config();
 
 // const mongoURL = process.env.LOCAL_MDB_URL;
 const mongoURL = process.env.MONGODB_URL;
-mongoose.connect(mongoURL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  ssl: true // Force secure connection (especially for Atlas or any remote DB)
-});
-
+mongoose.connect(mongoURL);
 
 
 const db = mongoose.connection;
